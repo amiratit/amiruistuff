@@ -1,0 +1,113 @@
+:root{--bg:#1f1f1e;--gold:#d6cc8a;--dim:#9a9468;--ink:#1f1f1e;--navy:#253a66;--blue:#6590e6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--gold);font-family:'Nunito',system-ui,sans-serif;line-height:1.6;font-size:1.05rem}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
+.brand{font-family:'Comfortaa','Nunito',sans-serif;text-decoration:none;font-size:1rem;letter-spacing:.02em}
+nav ul{list-style:none;display:flex;gap:28px;background:var(--gold);border-radius:6px;padding:4px 12px}
+nav a{color:var(--ink);text-decoration:none;font-size:.95rem}
+nav a[aria-current]{font-weight:700}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);padding:12px 28px;border-radius:8px;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.hero{padding:110px 0 120px}
+.hero .role{font-weight:600;letter-spacing:.02em;text-transform:uppercase;font-size:1.1rem}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);margin:14px 0 28px}
+.hero p{max-width:560px;font-size:1.4rem;margin-bottom:36px}
+.title{text-align:center;font-size:2.2rem;margin-bottom:56px}
+.title::after{content:"";display:block;width:86px;height:3px;background:var(--gold);margin:10px auto 0}
+.card{display:grid;grid-template-columns:1fr 1fr;background:var(--gold);color:var(--ink);border-radius:22px;overflow:hidden;max-width:860px;margin:0 auto 70px;min-height:450px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.card .txt{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:18px}
+.card h3{font-size:2rem}
+.card p{font-size:.95rem;opacity:.8}
+.card .ghost{border:1.5px solid var(--ink);border-radius:999px;padding:6px 20px;text-decoration:none;font-weight:600;font-size:.95rem}
+.card .art{background:var(--navy);display:grid;place-items:center;padding:20px}
+.card .art svg{width:80%;max-width:300px}
+.card.soon{align-items:center;padding:40px;gap:30px}
+.pixel{font-family:'Press Start 2P','Courier New',monospace;color:var(--ink)}
+.card.soon h3{font-size:1.6rem}
+.card.soon .pixel.big{font-size:4.5rem;text-align:center}
+.card.soon .pixel.sm{font-size:1.3rem;line-height:1.9}
+footer{text-align:center;padding:60px 0 40px;color:var(--dim);font-size:.9rem}
+footer .icons{display:flex;gap:26px;justify-content:center;margin-bottom:16px;color:var(--gold)}
+footer svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.4}
+footer .be{font:800 1.5rem 'Nunito',sans-serif;line-height:34px}
+.about{padding:110px 0 80px}
+.about h1{font-size:3rem;margin-bottom:34px}
+.about p{font-size:1.3rem;text-align:justify;margin-bottom:56px;max-width:1240px}
+/* project page */
+.sec{border-top:2px solid var(--gold);padding:44px 0 26px;margin-top:36px}
+.sec:first-of-type{margin-top:0}
+.sec::after{content:"Amirhossein Torabi   |   Product Design Portfolio   |   2026";display:block;font-size:.8rem;color:var(--dim);margin-top:50px;font-family:'Playfair Display',serif}
+.eyebrow{font-weight:700;font-size:.78rem;letter-spacing:.14em;margin-bottom:26px;display:block}
+.sec h2{font-size:2.1rem;margin-bottom:22px}
+.sec p{margin-bottom:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.two h3{font-family:'Nunito',sans-serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.intro{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.meta dt{font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-top:12px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:760px;margin:30px auto 0}
+.shot{aspect-ratio:288/626;border-radius:16px;border:1.5px dashed var(--dim);display:grid;place-items:center;color:var(--dim);font-size:.85rem;text-align:center;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover}
+.hero-shot{aspect-ratio:16/10;border-radius:14px}
+.final{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.final a{display:block;text-align:center;font-family:'Playfair Display',serif;font-size:2.2rem;text-transform:uppercase;text-decoration:underline;text-underline-offset:6px;line-height:1.5}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.final a svg{display:block;width:90px;height:90px;margin:0 auto 14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.final video{width:100%;max-height:560px;border-radius:14px;background:#000;display:block}
+
+/* sticky nav */
+html{scroll-padding-top:76px}
+header{position:sticky;top:0;z-index:50;background:var(--bg)}
+/* justified text */
+.hero p,.card p,.sec p,.about p,.meta dd{text-align:justify;hyphens:auto}
+/* hire-me section */
+.thanks{padding:30px 0 120px;text-align:center}
+.thanks .wrap{border-top:2px solid var(--gold);padding-top:90px}
+.thanks h2{font-family:'Press Start 2P','Playfair Display',serif;font-size:clamp(1.3rem,3.2vw,2.4rem);line-height:1.7;margin-bottom:44px;font-weight:400}
+.thanks .info{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 0;font-size:1.2rem}
+.thanks .info a{text-decoration:none;padding:0 32px}
+.thanks .info a:hover{text-decoration:underline;text-underline-offset:5px}
+.thanks .info a+a{border-left:2px solid var(--gold)}
+/* mobile only */
+@media(max-width:760px){
+body{font-size:1rem}
+.wrap{padding:0 20px}
+header .wrap{padding-top:14px;padding-bottom:14px;gap:10px;flex-wrap:wrap}
+.brand{font-size:.88rem}
+nav ul{gap:14px;padding:4px 10px}
+nav a{font-size:.85rem}
+.hero{padding:60px 0 70px}
+.hero p{font-size:1.15rem;margin-bottom:28px}
+.title{font-size:1.9rem;margin-bottom:36px}
+.card,.two,.intro,.final{grid-template-columns:1fr}
+.card{margin-bottom:40px;min-height:0;border-radius:18px}
+.card .txt{padding:30px 24px}
+.card h3{font-size:1.5rem}
+.card .art{min-height:240px}
+.card.soon{padding:36px 24px;gap:22px;text-align:center;justify-items:center}
+.card.soon h3{font-size:1.3rem}
+.card.soon .pixel.big{font-size:2.8rem}
+.card.soon .pixel.sm{font-size:1rem}
+.about{padding:60px 0 50px}
+.about h1{font-size:2.3rem;margin-bottom:24px}
+.about p{font-size:1.1rem;margin-bottom:36px}
+.sec{padding:32px 0 18px}
+.sec h2{font-size:1.7rem}
+.two{gap:26px}
+.intro{gap:26px}
+.shots{gap:10px}
+.shot{border-radius:10px;font-size:.7rem}
+.final{gap:26px}
+.thanks{padding-bottom:80px}
+.thanks .wrap{padding-top:60px}
+.thanks h2{margin-bottom:30px}
+.thanks .info{flex-direction:column;align-items:center;font-size:1.05rem;gap:12px}
+.thanks .info a{padding:0}
+.thanks .info a+a{border-left:0}
+footer{padding:40px 0 30px}
+}
+.card .art img{width:78%;max-width:340px;height:auto;display:block}
